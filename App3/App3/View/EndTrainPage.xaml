@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.View.EndTrainPage" BackgroundImage="endtrainback2.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="35">
+       <Label Text="Тренировка завершена" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal">
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="{Binding TrainPressLength}" FontSize="25" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="Упражнений"  FontSize="20" TextColor="White" FontAttributes="Bold"/>
+                </StackLayout>
+            <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label Text="{Binding A}"  FontSize="25" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="Длительность"  FontSize="20" TextColor="White" FontAttributes="Bold"/>
+            </StackLayout>
+            </StackLayout>
+            <Button x:Name="btnExit" HorizontalOptions="Center" CornerRadius="30" TextColor="White" FontAttributes="Bold" Text="      Выйти из тренировки      "/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

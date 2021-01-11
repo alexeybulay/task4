@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:page="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.ExitInTrain">
+    <StackLayout Margin="30,90,30,150"
+                 BackgroundColor="Teal" Opacity="0.9">
+            <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Вы хотите выйти?" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="20" Margin="0,0,0,110"/>
+                <Button x:Name="No" BackgroundColor="DarkOrange"
+                        Opacity="0.9"
+                        CornerRadius="25"
+                        Margin="20,0,20,10"
+                        FontSize="20"
+                        Text="Продолжить"
+                        TextColor="White"/>
+            <Button x:Name="Yes" Command="{Binding ExitInTrain}"  BackgroundColor="DarkOrange"
+                            Opacity="0.9"
+                            CornerRadius="25"
+                            Margin="20,0,20,0"
+                            FontSize="20"
+                            Text="Выйти"
+                            TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+</page:PopupPage>

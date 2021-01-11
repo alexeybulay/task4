@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.View.ProcessTrain" BackgroundColor="White" Title="{Binding NameTitle}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding NameTitle}" TextColor="Silver" FontSize="20" FontAttributes="None" HorizontalOptions="Center"/>
+            <!--<Frame BorderColor="Silver" VerticalOptions="CenterAndExpand">-->
+            <Image Source="{Binding ImagePath}" IsAnimationPlaying="True" WidthRequest="250" HeightRequest="250" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <!--</Frame>-->
+            <Label Text="{Binding NameExercise}" TextColor="Black" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="{Binding Count}" TextColor="Teal" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Button x:Name="checkButton" Text="Далее" VerticalOptions="CenterAndExpand" Command="{Binding NextExercise}" BackgroundColor="Orange" HeightRequest="60" BorderColor="Black" CornerRadius="15"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

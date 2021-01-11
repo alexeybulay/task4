@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  
+    xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:App3;assembly=App3"
+    x:Class="App3.MainPage2"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    mc:Ignorable="d">
+
+    <local:Page1 Title="Тренировки" Icon="fitness.png"/>
+    <local:Page2 Title="Продукты" Icon="food.png"/>
+    <local:Page3 Title="Настройки" Icon="settings.png"/>
+    <local:Page4 Title="Профиль" Icon="profile.png"/>
+    <!--<local:Page2 Title ="Тренироки" Icon="food.png" xf:BottomBarPageExtensions.TabColor="DarkOrange"/>
+    <local:Page3  Icon="settings.png" xf:BottomBarPageExtensions.TabColor="DarkOrange"/>
+    <local:Page4  Icon="profile.png" xf:BottomBarPageExtensions.TabColor="DarkOrange"/>-->
+</TabbedPage>

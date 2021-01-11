@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.Page2"           
+             BackgroundColor="White"
+             >
+    <StackLayout>
+        <Grid x:Name="grid1" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Label Text="Выберите тренировку" FontAttributes="Bold" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center"/>-->
+            <ImageButton x:Name="button1" Source="exercise.jpg" Margin="10,10,10,10" Grid.Row="0" Aspect="AspectFill"/>
+            <ImageButton x:Name="button2" Source="tablecalories.jpg" Margin="10,10,10,10" Grid.Row="1" Aspect="AspectFill"/>
+            <ImageButton x:Name="button3" Source="sportfood.jpg" Margin="10,10,10,10" Grid.Row="2" Aspect="AspectFill"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

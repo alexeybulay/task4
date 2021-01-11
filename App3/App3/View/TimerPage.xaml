@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.View.TimerPage" BackgroundImage="backgroundfone.png">
+    <ContentPage.Content>
+        <StackLayout>
+            
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+            <Button x:Name="btnIncrement" Text="+20s" FontSize="10" VerticalOptions="CenterAndExpand" CornerRadius="25" TextColor="White" BorderWidth="1" BackgroundColor="Transparent" BorderColor="DarkOrange"/>
+            <Label x:Name="labelTimer" Text="10" FontSize="48" TextColor="White" FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" />
+                    <Button x:Name="btnSkip" Text="Пропустить"  FontSize="18" VerticalOptions="CenterAndExpand" TextColor="White" CornerRadius="25" BackgroundColor="Transparent" BorderWidth="1" BorderColor="DarkOrange"/>
+        </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor="White">
+                <StackLayout>
+                    <Label Text="{Binding Text}" TextColor="Silver" FontSize="15" FontAttributes="None" HorizontalOptions="Start"/>
+                    <Label Text="{Binding NameExercise}" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start"/>
+                </StackLayout>
+                <Image Source="{Binding ImagePath}" IsAnimationPlaying="True" WidthRequest="80" HeightRequest="80"  HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

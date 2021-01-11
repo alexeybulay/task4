@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App7.View.ProductList" Title="Мои продукты">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить продукт"
+                     Icon="add.png" Command="{Binding AddProductCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="searchProduct" Placeholder="Поиск продуктов"/>
+            <ListView x:Name="listProduct" ItemsSource="{Binding Products}"     
+                  HasUnevenRows="True"
+                  BackgroundColor="#f5f5f5" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="White"
+                              Margin="4">
+                            <Label Grid.Row="0"
+                                   Text="{Binding NameProduct}"
+                                   FontSize="Medium"
+                                   Margin="4"
+                                   FontAttributes="None"  VerticalOptions="Center"/>
+                            <StackLayout Orientation="Vertical"
+                                         Margin="4"
+                                         Padding="2">
+             
+                                <Label Text="{Binding CalloriesProduct}" TextColor="DodgerBlue" FontSize="Medium" HorizontalOptions="End"/>
+                                <Label Text="ккал" HorizontalOptions="End" FontSize="Small"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

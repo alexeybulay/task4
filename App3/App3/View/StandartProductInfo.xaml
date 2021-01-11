@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App7.View.StandartProductInfo" BackgroundColor="DimGray">
+
+    <StackLayout BackgroundColor="White" VerticalOptions="Start" Padding="20">
+        <Label Text="{Binding NameProduct}" TextColor="DarkCyan"
+               Margin="8" FontAttributes="Bold"
+               FontSize="Large" HorizontalOptions="Center"/>
+        <Label Text="Для 100 грамм" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal" Margin="8">
+            <Label Text="Калории" TextColor="Black" FontSize="17"/>
+            <Label Text="{Binding CalloriesProduct}"
+                   TextColor="Black"
+                   FontSize="17" HorizontalOptions="EndAndExpand"
+            />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  Margin="8" >
+            <Label Text="Белки" TextColor="Red" FontSize="17"/>
+            <Label Text="{Binding ProteinProduct}"
+                   TextColor="Red" FontSize="17" HorizontalOptions="EndAndExpand"
+            />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  Margin="8">
+            <Label Text="Жиры" TextColor="Orange" FontSize="17" />
+            <Label Text="{Binding FatsProduct}"
+                   TextColor="Orange" FontSize="17"  HorizontalOptions="EndAndExpand"
+            />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="8">
+            <Label Text="Углеводы" TextColor="Green" FontSize="17" />
+            <Label Text="{Binding CarbohytratesProduct}"
+                   TextColor="Green" FontSize="17"  HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

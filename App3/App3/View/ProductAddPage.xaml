@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App7.View.ProductAddPage" BackgroundColor="DimGray">
+
+        <StackLayout 
+            Padding="20"
+                 Opacity="1"
+                 BackgroundColor="White"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Start">
+        <StackLayout>
+            <Entry x:Name="nameEntry" Text="{Binding NameProduct}"  FontAttributes="Bold" FontSize="20"
+                   HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="335" MaxLength="30"/>
+            <Label Text="Для 100 грамм" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Калории" FontAttributes="Bold" TextColor="Black" FontSize="17" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+
+            <Editor IsReadOnly="True"  TextColor="Black" x:Name="calloriesEntry" MaxLength="5" AutoSize="TextChanges" FontSize="17" 
+                    Text="{Binding CalloriesProduct}" VerticalOptions="Center" Keyboard="Numeric" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Белки" TextColor="Red" FontSize="17"  VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+            <Editor x:Name="proteinEntry" TextColor="Red" AutoSize="TextChanges" MaxLength="5"
+                    Text="{Binding ProteinProduct}" VerticalOptions="Center" FontSize="17" Keyboard="Numeric" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Жиры" TextColor="Orange" FontSize="17"  VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+            <Editor x:Name="fatsEntry" TextColor="Orange" MaxLength="5" AutoSize="TextChanges"
+                    Text="{Binding FatsProduct}" VerticalOptions="Center" FontSize="17"  Keyboard="Numeric" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Углеводы" TextColor="Green" FontSize="17" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+            <Editor x:Name="carbohydratesEntry" TextColor="Green" MaxLength="5" AutoSize="TextChanges"
+                   Text="{Binding CarbohytratesProduct}" VerticalOptions="Center" FontSize="17" Keyboard="Numeric" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <Button Text="Добавить" BackgroundColor="Orange" Margin="0,15,0,0" 
+                Command="{Binding SaveProductCommand}" BorderColor="Black" CornerRadius="15"/>
+        <Label x:Name="dataLabel" FontSize="10" HorizontalOptions="Center"/>
+        </StackLayout>
+</ContentPage>
